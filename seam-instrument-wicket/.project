@@ -1,0 +1,13 @@
+<projectDescription>
+  <name>seam-instrument-wicket</name>
+  <comment>A maven mojo to instrument wicket components to work with Seam&apos;s wicket integration.</comment>
+  <projects/>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.jdt.core.javabuilder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+  </natures>
+</projectDescription>

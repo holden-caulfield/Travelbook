@@ -1,0 +1,37 @@
+<project name="MyWebApplication" basedir="." default="deploy">
+
+<target name="clean">
+<subant failonerror="false">
+            <fileset dir="." includes="travelbook-seam-ejb3/build.xml" excludes="build.xml"/>
+            <target name="clean"/>
+</subant>
+<subant failonerror="false">
+            <fileset dir="." includes="travelbook-seam-web/build.xml" excludes="build.xml"/>
+            <target name="clean"/>
+        </subant>
+</target>
+<target name="build-ejb">
+<subant failonerror="false">
+            <fileset dir="." includes="travelbook-seam-ejb3/build.xml" excludes="build.xml"/>
+            <target name="install"/>
+</subant>
+</target>
+<target name="deploy.tomcat" depends="build-ejb">
+<subant failonerror="false">
+            <fileset dir="." includes="travelbook-seam-web/build.xml" excludes="build.xml"/>
+            <target name="install"/>
+        </subant>
+</target>
+<target name="jboss.war" depends="build-ejb">
+<subant failonerror="false">
+            <fileset dir="." includes="travelbook-seam-web/build.xml" excludes="build.xml"/>
+            <target name="jboss.war"/>
+</subant>
+</target>
+<target name="deploy" depends="jboss.war">
+<subant failonerror="false">
+            <fileset dir="." includes="travelbook-seam-ear/build.xml" excludes="build.xml"/>
+            <target name="deploy"/>
+</subant>
+</target>
+</project>

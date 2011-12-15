@@ -1,0 +1,163 @@
+/*Special header form*/
+
+#header label {
+	color: white;
+}
+
+#header form, #header #signOff {
+	float: right;
+	font-size: 0.8em;
+	display: table;
+	text-align: right;
+	margin-right: 2%;
+}
+#header #signOff div{
+	display: table-row;
+	padding: 5px;
+	height: 29px;
+}
+#header #signOff div span{
+	display: table-cell;
+	padding: 2px;
+}
+#header input {
+	border: none;
+	padding: 2px;
+}
+#header button {
+	text-transform: uppercase;
+	color: #110073;
+	background-color: #d4d5d9;
+	border: none;
+	padding: 2px 5px;
+}
+#header form div{
+	padding: 5px;
+	display: table-row;
+}
+
+#header form div span{
+	display: table-cell;
+	padding: 5px;
+}
+
+/*regular forms*/
+
+form {
+	font-size: 0.7em;
+}
+
+form div.formContent {
+	display: table;
+	width: 100%;
+	padding: 10px;
+}
+
+form div.formContent div {
+	display: table-row;
+}
+
+form div.formContent div > label, 
+form div.formContent div > input,
+form div.formContent div > span {
+	display: table-cell;
+	margin: 2px;
+}
+
+form div.formContent div > input {
+	width: 100%;
+}
+
+form div > label {
+	text-align: right;
+}
+
+form div  label {
+	color: #110073;
+}
+
+form div input, form div button {
+	border-color: #110073;
+}
+
+form div.buttonBar {
+	text-align: right;
+	margin-right: -15px;
+}
+
+form div button {
+	background-color: #110073;
+	color: white;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 2px;
+}
+
+p#signupLegend {
+	width: 100%;
+	text-align: center;
+}
+
+span.alertLegend {
+	color: #cf3e09;
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+table {
+	border: 1px solid #110073;
+	margin-top: 5px;
+}
+
+table td, table th {
+	padding: 10px;
+}
+
+table th {
+	color: white;
+	background-color: #110073;
+}
+
+table a {
+	color: #110073;
+}
+
+.tabPanel {
+	border-bottom: 1px solid #110073;
+}
+
+div.tabPanel ul li {
+	display: inline-block;
+	background-image: url(../images/tab_background.png);
+	width: 327px;
+	height: 30px;
+	padding-top: 15px;
+	text-align: center;
+	
+}
+
+div.tabPanel ul li.active {
+	background-image: url(../images/tab_background_active.png);
+} 
+
+div.tabPanel ul li:hover {
+	background-image: url(../images/tab_background_hover.png);
+} 
+
+div.tabPanel label {
+	letter-spacing: -2px;
+	font-size: 1.2em;
+	padding-top: 20px;	
+}
+
+div.tabPanel ul li.active label {
+	color: white;
+}
+
+div.tabPanel label:hover {
+	cursor: pointer;
+}
+
+div.tabPanel ul li input {
+	display: none;
+}

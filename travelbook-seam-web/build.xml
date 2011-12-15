@@ -1,0 +1,143 @@
+<project name="travelbook-war" basedir="." default="install">
+
+    <!-- project-specific variables -->
+    <property name="package.name" value="travelbook-seam-web.war" />
+    <property name="webapp.dir" value="/home/cruz/soft/apache-tomcat-6.0.18/webapps" />
+
+    <property environment="env" />
+    <property name="build.dir" value="build" />
+    <property file="${build.dir}/build.${env.HOSTNAME}" />
+
+    <property name="lib.dir" value="lib" />
+    <property name="src.dir" value="src/main/java" />
+    <property name="resources.dir" value="src/main/webapp" />
+    <property name="dest.dir" value="target" />
+
+    <!-- put everything in a temp folder with the right structure during the build -->
+    <property name="temp.dir" value="temp" />
+    <property name="temp.dir.web-inf" value="${temp.dir}/WEB-INF" />
+    <property name="temp.dir.lib" value="${temp.dir.web-inf}/lib" />
+    <property name="temp.dir.classes" value="${temp.dir.web-inf}/wicket" />
+    <property name="temp.dir.meta-inf" value="${temp.dir}/META-INF" />
+
+    <property name="package.file" value="${dest.dir}/${package.name}" />
+
+    <path id="build.class.path">
+        <fileset dir="lib">
+            <include name="**/*.jar" />
+        </fileset>
+        <fileset dir="../travelbook-seam-ejb3/target">
+            <filename name="travelbook-seam-ejb3.jar" />
+	</fileset>
+        <fileset dir="../travelbook-seam-ejb3/lib">
+		<include name="**/*.jar" />
+	</fileset>
+    </path>
+
+    <target name="clean">
+        <delete dir="${dest.dir}" />
+        <delete dir="${temp.dir}" />
+        <delete dir="${temp.dir.classes}" />
+        <delete dir="${temp.dir.meta-inf}" />
+        <delete dir="${temp.dir.web-inf}" />
+    </target>
+
+    <target name="prepare">
+        <mkdir dir="${dest.dir}" />
+        <mkdir dir="${temp.dir}" />
+        <mkdir dir="${temp.dir.lib}" />
+        <mkdir dir="${temp.dir.meta-inf}" />
+        <mkdir dir="${temp.dir.web-inf}" />
+        <mkdir dir="${temp.dir.classes}" />
+    </target>
+
+    <!-- COMPILE -->
+    <target name="compile" depends="prepare">
+        <echo>=== COMPILE WAR files ===</echo>
+        <echo>Compiling ${src.dir} files ...</echo>
+        <javac debug="on" srcdir="${src.dir}" destdir="${temp.dir.classes}" includes="**/*">
+            <classpath refid="build.class.path" />
+        </javac>
+
+    </target>
+
+    <!-- PACKAGE -->
+    <target name="package" depends="compile">
+      <echo>=== PACKAGE ===</echo>
+     
+      <copy todir="${temp.dir}">
+	<fileset dir="${resources.dir}">
+		<include name="**/*" />
+		<exclude name="WEB-INF/components.xml"/>
+		</fileset>
+	</copy>
+
+      <copy todir="${temp.dir.classes}">
+        <fileset dir="${src.dir}">
+          <include name="**/*.xml"/>
+          <include name="**/*.xsl"/>
+          <include name="**/*.html"/>
+        </fileset>
+      </copy>
+      <copy todir="${temp.dir.lib}">
+        <fileset dir="${lib.dir}">
+          <include name="**/*.jar"/>
+        </fileset>
+      </copy>
+     </target>
+
+    	
+        <target name="tomcat.archive" depends="package" description="Package the archives for tomcat">
+		<copy todir="${temp.dir}">
+		<fileset dir="${resources.dir}">
+				<include name="WEB-INF/components.xml"/>
+		</fileset>
+		<filterset>
+                     <filter token="jndiPattern" value="#{ejbName}/local" />
+                 </filterset>
+		</copy>
+                <jar jarfile="${package.file}">
+                        <fileset dir="${temp.dir}">
+          			<include name="**/*"/>
+          			<exclude name="**/log4j*.jar"/>
+          			<exclude name="**/slf4*.jar"/>
+			</fileset>
+                        <zipfileset dir="../travelbook-seam-ejb3/target" prefix="WEB-INF/lib">
+                                <include name="travelbook-seam-ejb3.jar" />
+                        </zipfileset>
+                </jar>
+        </target>
+
+        <target name="jboss.war" depends="package" description="Package the war for jboss">
+		<copy todir="${temp.dir}">
+		<fileset dir="${resources.dir}">
+				<include name="WEB-INF/components.xml"/>
+		</fileset>
+		<filterset>
+                     <filter token="jndiPattern" value="travelbook-seam/#{ejbName}/local" />
+                 </filterset>
+		</copy>
+                <jar jarfile="${package.file}">
+                        <fileset dir="${temp.dir}" >
+          			<include name="**/*"/>
+          			<exclude name="**/jboss-seam.jar"/>
+          			<exclude name="**/jboss-el*.jar"/>
+          			<exclude name="**/log4j*.jar"/>
+          			<exclude name="**/jsf-api*.jar"/>
+          			<exclude name="**/jsf-impl*.jar"/>
+				 <!--<filterset>
+                                <filter token="jndiPattern" value="travelbook-seam/#{ejbName}/local" />
+	                        </filterset>-->
+
+			</fileset>
+                </jar>
+        </target>
+
+    <!-- INSTALL -->
+	<target name="install" depends="tomcat.archive">
+      <echo>=== INSTALL ===</echo>
+      <copy file="${package.file}" tofile="${webapp.dir}/${package.name}" overwrite="true" />
+    </target>
+
+</project>
+

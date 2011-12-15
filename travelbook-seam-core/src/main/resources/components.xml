@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns="http://jboss.com/products/seam/components"
+	xmlns:persistence="http://jboss.com/products/seam/persistence"
+	xmlns:transaction="http://jboss.com/products/seam/transaction"
+	xmlns:security="http://jboss.com/products/seam/security" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://jboss.com/products/seam/components http://jboss.com/products/seam/components-2.1.xsd
+                 http://jboss.com/products/seam/transaction http://jboss.com/products/seam/transaction-2.1.xsd
+                 http://jboss.com/products/seam/persistence http://jboss.com/products/seam/persistence-2.1.xsd
+                 http://jboss.com/products/seam/security http://jboss.com/products/seam/security-2.1.xsd
+                 ">
+
+
+	<persistence:entity-manager-factory
+		name="entityManagerFactory" persistence-unit-name="database" />
+
+	<persistence:managed-persistence-context
+		name="entityManager" auto-create="true" entity-manager-factory="#{entityManagerFactory}" />
+
+	<factory name="session" value="#{entityManager.delegate}"
+		scope="stateless" auto-create="true" />
+
+	<transaction:entity-transaction
+		entity-manager="#{entityManager}" />
+
+    <security:identity authenticate-method="#{authenticator.authenticate}"/>
+    
+		
+</components>

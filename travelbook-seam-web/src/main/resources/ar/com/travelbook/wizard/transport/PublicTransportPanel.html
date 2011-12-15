@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html 
+	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:wicket="http://wicket.sourceforge.net/" 
+	xml:lang="en" 
+	lang="en">  
+<body>
+<wicket:panel>
+	<form wicket:id="searchForm">
+	Medio:
+	<select name="medioTransporte" wicket:id="medioTransporte">
+	</select><br/>
+	Empresa:<input type="text" wicket:id="empresa" /><br/>
+	Fecha salida: 	<input type="text" wicket:id="fechaSalida" size="10"  /> <br/> 
+	Fecha llegada: <input type="text" wicket:id="fechaLlegada" size="10"  /> <br/>
+	Minimo precio: <input type="text" wicket:id="minimoPrecio" /> <br/>
+	Maximo precio: <input type="text" wicket:id="maximoPrecio" /> <br/>
+	<input type="submit" value="buscar" />
+	<table cellspacing="0" class="dataview" border="1px">
+	<tr>
+		<th>Medio</th>
+	    <th>Empresa</th>
+		<th>Precio</th>
+	    <th>Horario Salida</th>
+	    <th>Horario Llegada</th>
+	    <th>Ver Detalle</th>
+	</tr>
+	<tr wicket:id="repeating">
+	    <td>
+	    <span wicket:id="medio">[medio]</span>
+	    </td>
+	    <td>
+	    <a href="#" wicket:id="link"><span wicket:id="nombre">[nombre]</span></a>
+	    </td>
+	    <td>
+		    <span wicket:id="costo">[precio]</span>
+	    </td>
+	    <td>
+	    	<span wicket:id="fechaSalida">[Horario Salida]</span>
+	    </td>
+	    <td>
+	    	<span wicket:id="fechaLlegada">[Horario Llegada]</span>
+	    </td>
+	    <td>
+		    <a href="#" wicket:id="linkDetalle">Ver Detalle</a>
+	    </td>
+	</tr>
+	</table>
+	</form>
+</wicket:panel>
+</body>
+</html>

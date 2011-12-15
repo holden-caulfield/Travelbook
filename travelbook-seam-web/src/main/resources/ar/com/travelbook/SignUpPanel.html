@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.sourceforge.net/" xml:lang="en" lang="en">
+<body>
+<wicket:panel>
+	<p id="signupLegend">
+		<span class="alertLegend">&iquest;Nuevo en Travelbook?</span>
+		&iexcl;Registrarse es gratis!
+	</p>
+	<form class="bodyForm" wicket:id="signForm">
+		<div class="formContent">
+			<div>
+				<label for="sign_name">Nombre:</label>
+				<input type="text" wicket:id="name" name="sign_name" id="sign_name" />
+			</div>
+			<div>
+				<label for="sign_username">Email:</label>
+				<input type="text" wicket:id="username" name="sign_username" id="sign_username" />
+			</div>
+			<div>
+				<label for="sign_password">Contrase&ntilde;a:</label>
+				<input type="password" name="sign_password" wicket:id="password" id="sign_password"/>
+			</div>
+			<div>
+				<label for="sign_password_confirm">Repita Contrase&ntilde;a:</label>
+				<input type="password" name="sign_password_confirm" wicket:id="signPasswordConfirm" id="sign_password_confirm"/>
+			</div>	
+		</div>
+		<div class="buttonBar">
+			<button type="submit">Registrarme</button>
+		</div>
+	</form>
+
+</wicket:panel>
+</body>
+</html>

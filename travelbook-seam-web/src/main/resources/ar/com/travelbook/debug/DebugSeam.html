@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html 
+	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:wicket="http://wicket.sourceforge.net/" 
+	xml:lang="en" 
+	lang="en">
+<head>
+</head>
+<body>
+<h2>conversations</h2>
+<div wicket:id="listConversation">
+id: <span wicket:id="id" />
+start date time:<span wicket:id="startDateTime" />
+last date time:<span wicket:id="lastDateTime" />
+<a href="" wicket:id="viewConversation">View Conversation</a>
+<br/>
+description: <span wicket:id="description" />
+view id: <span wicket:id="viewId" />
+</div>
+<h2>attribute of component</h2>
+<table border="1">
+<tr><th>name</th><th>value</th>
+</tr>
+<tr wicket:id="listAttributes">
+	<td>
+		<span wicket:id="name"></span>
+	</td>
+	<td>
+		<span wicket:id="stringValue"></span>
+	</td>
+</tr>
+</table>
+<h2>context objects</h2>
+<div wicket:id="listContext">
+name: <a href="" wicket:id="viewObject"><span wicket:id="name"></span></a>
+</div>
+<h2>business process objects</h2>
+<div wicket:id="listBusiness">
+name: <a href="" wicket:id="viewObject"><span wicket:id="name"></span></a>
+</div>
+<h2>session objects</h2>
+<div wicket:id="listSession">
+name: <a href="" wicket:id="viewObject"><span wicket:id="name"></span></a>
+</div>
+<h2>application objects</h2>
+<div wicket:id="listApplication">
+name: <a href="" wicket:id="viewObject"><span wicket:id="name"></span></a>
+</div>
+</body>  
+</html>

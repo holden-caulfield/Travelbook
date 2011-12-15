@@ -1,0 +1,186 @@
+
+#stepsPanel {
+	height: 145px;
+	background-image: url(../css/images/steps_background.gif);
+	background-repeat: repeat-x;
+}
+#stepsPanel h2 {
+	font-size: 1.7em;
+}
+
+#stepsPanel h2 {
+	padding-left: 40px;
+	padding-top: 40px;
+	color: #110073;
+	float: left;
+}
+
+#stepsPanel div#steps {
+	float: left;
+	padding-left: 40px;
+	padding-top: 15px;
+	width: 700px;
+	font-weight: bold;
+}
+#stepsPanel div#steps span.arrow{
+	display: inline-block;
+	height: 36px;
+	width: 25px;
+	background-image: url(../css/images/wizard_arrow.gif);
+	background-repeat: no-repeat;
+}
+#stepsPanel div#steps .step {
+	display: inline-block;
+	text-align: center;
+	color: #39c5ff;
+	height: 126px;
+	width: 96px;
+	background-position: 11px 39px, 0% 25px;
+	background-repeat: no-repeat;
+	font-size: 1.7em;
+}
+#stepsPanel div#steps a.step {
+	color: #39c5ff;
+	
+}
+#stepsPanel div#steps .step.current {
+	color: #110073;
+}
+#stepsPanel div#steps span.step {
+	color: gray;
+}
+#stepsPanel div#steps .step p{
+	padding-top: 55px;
+	color: #110073;
+	font-size: 0.5em;
+	letter-spacing: -1px;
+	font-weight: normal;
+}
+
+#stepsPanel div#steps .current.step p{
+	color: blue;
+}
+#stepsPanel div#steps .current.step p{
+	color: white;
+}
+
+#stepsPanel div#steps .itinerario.current {
+	background-image: url(../css/images/step_itinerary.gif), url(../css/images/step_current.gif) ;
+}
+#stepsPanel div#steps .transport.current {
+	background-image: url(../css/images/step_transport.gif), url(../css/images/step_current.gif) ;
+}
+#stepsPanel div#steps .accomodation.current {
+	background-image: url(../css/images/step_accomodation.gif), url(../css/images/step_current.gif) ;
+}
+#stepsPanel div#steps .activities.current {
+	background-image: url(../css/images/step_activities.gif), url(../css/images/step_current.gif) ;
+}
+#stepsPanel div#steps .confirmation.current {
+	background-image: url(../css/images/step_confirmation.gif), url(../css/images/step_current.gif) ;
+}
+#stepsPanel div#steps .itinerario {
+	background-image: url(../css/images/step_itinerary.gif), url(../css/images/step_checked.gif) ;
+}
+#stepsPanel div#steps .transport {
+	background-image: url(../css/images/step_transport.gif), url(../css/images/step_checked.gif) ;
+}
+#stepsPanel div#steps .accomodation {
+	background-image: url(../css/images/step_accomodation.gif), url(../css/images/step_checked.gif) ;
+}
+#stepsPanel div#steps .activities {
+	background-image: url(../css/images/step_activities.gif), url(../css/images/step_checked.gif) ;
+}
+#stepsPanel div#steps .confirmation {
+	background-image: url(../css/images/step_confirmation.gif), url(../css/images/step_checked.gif) ;
+}
+
+#stepsPanel div#steps span.itinerario {
+	background-image: url(../css/images/step_itinerary.gif), url(../css/images/step_unavailable.gif) ;
+}
+#stepsPanel div#steps span.transport {
+	background-image: url(../css/images/step_transport.gif), url(../css/images/step_unavailable.gif) ;
+}
+
+#stepsPanel div#steps span.accomodation {
+	background-image: url(../css/images/step_accomodation.gif), url(../css/images/step_unavailable.gif) ;
+}
+#stepsPanel div#steps span.activities {
+	background-image: url(../css/images/step_activities.gif), url(../css/images/step_unavailable.gif) ;
+}
+#stepsPanel div#steps span.confirmation {
+	background-image: url(../css/images/step_confirmation.gif), url(../css/images/step_unavailable.gif) ;
+}
+
+#middleContainer {
+	overflow: auto;
+	width: 100%;
+}
+
+.detailsPanel {
+	width: 20%;
+	float: left;
+}
+.detailsPanel h2 {
+	font-size: 1.1em;
+	padding: 10px;
+}
+.detailsPanel ol {
+	padding: 0px 20px 20px 10px;
+}
+.detailsPanel ol li > a {
+	text-decoration: none;
+	color: black;
+}
+.detailsPanel ol li {
+	list-style: decimal;
+	list-style-position: inside;
+	border-bottom: 1px #e7e7e7 solid;
+	font-size: 0.8em;
+	padding: 4px;
+}
+.detailsPanel ol li:hover {
+	background-color: #d1fdfe;
+}
+
+
+.stepContent h2 {
+	font-size: 1.1em;
+	letter-spacing: -2px;
+	padding: 10px;
+	float:left;
+}
+
+.stepContent {
+	width: 80%;
+	float: left;
+}
+
+.stepContent form{
+    font-size: 0.8em;
+}
+
+.stepContent form input{
+    border: 1px solid #b0b0b0;
+    padding: 6px;
+    width: 240px;
+}
+
+.stepContent form button{
+	background-image: url(images/btn_search.gif);
+	background-repeat: no-repeat;
+	width: 22px;
+	border: none;
+	padding: 0px;
+	background-color: white;
+	height: 20px;
+}
+
+.rankablePanel {
+	padding: 5px;	
+	border: 2px solid #e8e8e8;
+}
+
+.wicketRatingText {
+	font-size: .8em;
+}

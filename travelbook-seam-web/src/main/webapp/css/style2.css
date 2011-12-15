@@ -1,0 +1,91 @@
+body{
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+}
+
+body p, body a {
+	font-size: 0.75em;
+}
+
+body div p a {
+	font-size: 1em;
+}
+
+
+h1, h2, h3 {
+	letter-spacing: -2px;
+	font-weight: bold;
+	padding: 0 0 10px;
+}
+
+a {
+	color: #CF3E09;
+}
+	
+#header {
+	color: white;
+	background-image: url(../css/images/logo.gif);
+	background-repeat: no-repeat;
+	background-position: 62px 30px;
+	background-color: #110073;
+	width: auto;
+	height: 113px;
+	padding: 35px 0 0 176px;
+}
+
+#header h1 a{
+	color: #6cf6ff;
+	font-size: 3em;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+#header p {
+	color: #ffffff;
+	font-size: 2em;
+	padding-left: 154px;
+}
+
+#header a {
+	color: #d4d5d9;
+}
+
+#content {
+	padding: 2%;
+}
+
+#innerContent {
+	margin-bottom: 10px;
+	background-color: fuchsia;	
+}
+
+#footer {
+	color: white;
+	background-color: #110073;
+	font-size: 0.8em;
+	margin: 2%;
+	padding: 5px;
+	text-align: center;
+	clear: both;
+}
+
+#footer ul li{
+	display: inline;
+	border-left: 1px solid #d4d5d9;
+	padding: 0 10px;
+}
+
+#footer ul li.first{
+	border: none;
+}
+
+#footer a {
+	color: #d4d5d9;
+	text-decoration: none;
+	font-size: 0.9em;
+}
+#footer a:hover {
+	text-decoration: underline;
+}
+#homeBanner h2 {
+	font-size: 1.7em;
+}

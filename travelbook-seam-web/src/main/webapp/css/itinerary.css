@@ -1,0 +1,43 @@
+
+.stepContentItinerarySelection {
+	width: 600px;
+	float: left;
+	 
+}
+
+.stepContentItineraryCloud {
+	width: 200px;
+	float: left;
+}
+
+.stepContentItineraryCloud h2 {
+	font-size: 1.1em;
+	letter-spacing: -2px;
+	padding: 10px;
+	float:none;
+}
+
+.map {
+	margin: 5px;
+	border: 5px solid #e8e8e8;
+	width:429px;
+	height: 231px;
+	position: relative;
+	background-image: url(../css/images/world.png);
+}
+
+.pinpoint {
+	background-image: url(../css/images/city.png);
+	width: 9px;
+	height: 9px;
+	position: absolute;
+	display: block;
+}
+
+.stepContentItinerarySelection .hover, .pinpoint:hover {
+	background-image: url(../css/images/cityHover.png) !important;
+}
+
+.stepContentItinerarySelection .selected {
+	background-image: url(../css/images/citySelected.png);
+}

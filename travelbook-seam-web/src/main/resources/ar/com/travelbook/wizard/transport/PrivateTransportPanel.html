@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html 
+	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:wicket="http://wicket.sourceforge.net/" 
+	xml:lang="en" 
+	lang="en">  
+<body>
+<wicket:panel>
+<form wicket:id="personalForm" id="personalForm">
+	Medio:
+	<select name="medioTransporte" wicket:id="category">
+	</select><input type="text" wicket:id="otherCategory"/><br/>
+	Empresa: <input type="text" wicket:id="description"/><br/>
+	Fecha salida: 	<div wicket:id="departureDateTime" >
+	</div> 
+	Fecha llegada: <div wicket:id="arrivalDateTime" />
+	<input type="button" value="Guardar" wicket:id="pSubmit" />
+</form>
+</wicket:panel>
+</body>
+</html>

@@ -1,0 +1,100 @@
+
+#homeBanner {
+	height: 176px;
+	width: 50%; 	
+	padding: 10px 2%;
+	background-image: url(images/bg_home_banner.jpg);
+	background-repeat: repeat-x;
+	float: left;
+}
+
+#homeBanner h2 {
+	color: black;
+}
+
+#homeBanner div.linkContainer, #homeBanner a {
+	background-image: url(images/luggage.png);
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+#homeBanner div.linkContainer {
+	height: 40px;
+	padding: 10px 0;
+}
+
+#homeBanner a {
+	display: block;
+	color: black !important;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+	background-color: #6cf6ff;
+	padding: 5px 15%;
+	background-position: right -14px;
+}
+
+#homeRegister {
+	width: 40%;
+	float: left;
+}
+
+#offers {
+	clear:both;
+}
+
+#activities, #feed, #offers {
+	float: left;
+	margin-bottom: 10px;
+}
+
+
+p.more {
+	clear: both;
+	text-align: right;
+	padding-right: 15px;
+	padding-bottom: 10px;
+}
+
+#feed, #offers {
+	width: 33%;
+}
+
+#activities {
+	width: 34%;
+}
+
+
+ul li {
+	margin: 5px;
+	clear: both;
+}
+
+ul li img {
+	float: left;
+	margin-top: 5px;
+}
+
+#offers img {
+	width: 130px;
+	height: 95px;
+}
+
+#offers ul .detail {
+	padding-left: 135px;
+}
+
+#feed img {
+	width: 48px;
+	height: 48px;
+}
+
+#feed ul .detail {
+	padding-left: 55px;
+}
+
+#activities img {
+	width: 350px;
+	height: 200px;
+	
+}

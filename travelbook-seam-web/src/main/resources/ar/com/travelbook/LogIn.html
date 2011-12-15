@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.sourceforge.net/" xml:lang="en" lang="en">
+<body>
+<wicket:extend>
+	<form class="bodyForm" wicket:id="loginForm">
+		<div class="formContent">
+			<div>
+				<label for="login_user">Usuario:</label>
+				<input type="text" wicket:id="username" id="login_user" name="user" />
+			</div>
+			<div>
+				<label for="login_password">Password:</label>
+				<input type="password" name="password" wicket:id="password" id="login_password"/>
+			</div>
+		</div>
+		<div class="buttonBar">
+			<button type="submit">Ingresar</button>
+		</div>	
+	</form>
+
+	<div wicket:id="register"></div>
+</wicket:extend>
+</body>
+</html>
+

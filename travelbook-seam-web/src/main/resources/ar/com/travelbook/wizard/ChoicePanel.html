@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html 
+	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:wicket="http://wicket.sourceforge.net/" 
+	xml:lang="en" 
+	lang="en">  
+<body>
+<wicket:panel>
+<div wicket:id="itemType" class="tabPanel" >
+	<ul>
+		<li wicket:id="publicTab">
+			<input  type="radio" id="public" wicket:id="public"/>
+		  	<label for="public">Contratar</label>
+		</li>
+		<li wicket:id="privateTab">
+			<input type="radio" id="private" wicket:id="private" />
+	  		<label for="private">Por mi cuenta</label>
+		</li>
+	</ul>
+</div>
+<br/>
+<div wicket:id="publicDiv"></div>
+<div wicket:id="privateDiv"></div>
+</wicket:panel>
+</body>
+</html>

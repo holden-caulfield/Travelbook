@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.sourceforge.net/" xml:lang="en" lang="en">
+<body>
+	<wicket:extend>
+	Detalle<br/>
+	<h1><span wicket:id="name"></span></h1>
+	<a wicket:id="back">volver</a>
+	<br/><br/>
+	<div wicket:id="detailPanel">
+		Votos Total: <strong><span wicket:id="totalVotes"></span></strong><br/><br/>
+		<div wicket:id="votePanel" class="votePanel">
+			<a wicket:id="iLike">Me gusta</a> <a wicket:id="iDontLike">No me gusta</a><br/>
+		</div>
+		<string>Comentarios:</string><br/>
+		<ul>
+			<li wicket:id="commentsItems"><span wicket:id="user">[usuario]</span> dijo: <span wicket:id="previousComments">[texto]</span></li>
+		</ul>
+	</div>
+	<a href="" wicket:id="loginToPost">Ingresa para votar o comentar</a>
+	<form wicket:id="postComments">
+		<input type="text" wicket:id="comments" />
+		<input type="submit" wicket:id="submit" value="Comentar" />
+	</form>
+	</wicket:extend>
+</body>
+</html>
+
