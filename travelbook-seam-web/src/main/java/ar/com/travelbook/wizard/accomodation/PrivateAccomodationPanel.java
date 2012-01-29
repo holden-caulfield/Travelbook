@@ -20,8 +20,6 @@ import ar.com.travelbook.domain.AccomodationCategory;
 import ar.com.travelbook.domain.Travel;
 import ar.com.travelbook.wizard.WizardPage;
 
-/// TODO agregar costo como propiedad a editar/agregar en TransportePersonal
-/// TODO agregar detalle como propiedad a editar/agregar en TransportePersonal
 public class PrivateAccomodationPanel extends Panel {
 	private static final long serialVersionUID = 941943527294025868L;
 	@In
@@ -35,7 +33,7 @@ public class PrivateAccomodationPanel extends Panel {
 		super(id);
 		accomodationTicketPrivate = new AccomodationTicketPrivate();
 		AccomodationTicket accomodationTicket = getAccomodationTicketPrivate();
-		Form privateForm = new Form("privateForm",new CompoundPropertyModel(null) 
+		Form privateForm = new Form("privateForm",new CompoundPropertyModel(accomodationTicketPrivate) 
 		{
 			private static final long serialVersionUID = 1L;
 			@Override
@@ -46,7 +44,7 @@ public class PrivateAccomodationPanel extends Panel {
 
 		this.add(privateForm);
 		List<AccomodationCategory> categories = Arrays.asList(AccomodationCategory.values());
-		DropDownChoice accomodationCategory = new DropDownChoice("accomodationCategory", categories){			/**
+		DropDownChoice accomodationCategory = new DropDownChoice("category", categories){			/**
 			 * 
 			 */
 			private static final long serialVersionUID = 1L;

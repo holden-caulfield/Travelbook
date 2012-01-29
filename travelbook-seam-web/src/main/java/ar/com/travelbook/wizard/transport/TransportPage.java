@@ -55,19 +55,6 @@ public class TransportPage extends WizardPage {
 				new PrivateTransportPanel("privateDiv")));
 		add(tipoTransporteForm);
 		
-		tipoTransporteForm.add(new AjaxButton("siguiente"){
-			private static final long serialVersionUID = 1L;
-
-			@Override
-			public boolean isEnabled() {
-				return travel.canChooseAccomodation();
-			}
-			@Override
-			protected void onSubmit(AjaxRequestTarget target, Form form) {
-				setResponsePage(PageSolver.solvePage(AccomodationPage.class));
-			}
-			
-		});
 		tipoTransporteForm.setOutputMarkupId(true);
 	}
 

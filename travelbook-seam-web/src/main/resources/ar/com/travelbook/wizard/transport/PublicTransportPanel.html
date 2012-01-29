@@ -8,16 +8,34 @@
 	lang="en">  
 <body>
 <wicket:panel>
-	<form wicket:id="searchForm">
-	Medio:
-	<select name="medioTransporte" wicket:id="medioTransporte">
-	</select><br/>
-	Empresa:<input type="text" wicket:id="empresa" /><br/>
-	Fecha salida: 	<input type="text" wicket:id="fechaSalida" size="10"  /> <br/> 
-	Fecha llegada: <input type="text" wicket:id="fechaLlegada" size="10"  /> <br/>
-	Minimo precio: <input type="text" wicket:id="minimoPrecio" /> <br/>
-	Maximo precio: <input type="text" wicket:id="maximoPrecio" /> <br/>
-	<input type="submit" value="buscar" />
+	<form class="filter" wicket:id="searchForm">
+	<div class="formContent">	
+		<div>
+			<label for="medioTransporte"> Medio: </label>
+			<select name="medioTransporte" id="medioTransporte" wicket:id="medioTransporte"></select>
+			<label for="empresa"> Empresa: </label>	
+			<input id="empresa" type="text" wicket:id="empresa" />
+		</div>	
+		<div>
+			<label for="fechaSalida"> Salida: </label>
+			<span>
+				<input type="text" id="fechaSalida" wicket:id="fechaSalida" size="10"  /> 
+			</span>
+			<label for="fechaLlegada"> Llegada: </label>
+			<span>
+				<input type="text" id="fechaLlegada" wicket:id="fechaLlegada" size="10"  />
+			</span>
+		</div>
+		<div>
+			<label for="minimoPrecio">Precio Desde: </label> 
+			<input type="text" id="minimoPrecio" wicket:id="minimoPrecio" size="10" /> 
+			<label for="maximoPrecio"> Hasta: </label> 
+			<input type="text" id="maximoPrecio" wicket:id="maximoPrecio" size="10" />
+		</div>
+		<div class="buttonBar">
+			<input class="formButton" type="submit" value="buscar" />
+		</div>
+	</div>
 	<table cellspacing="0" class="dataview" border="1px">
 	<tr>
 		<th>Medio</th>

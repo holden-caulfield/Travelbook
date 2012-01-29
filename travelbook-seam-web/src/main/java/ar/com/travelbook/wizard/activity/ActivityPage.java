@@ -14,13 +14,11 @@ import org.jboss.seam.annotations.RaiseEvent;
 import org.jboss.seam.contexts.Contexts;
 import org.joda.time.DateTime;
 
-import ar.com.travelbook.common.PageSolver;
 import ar.com.travelbook.common.SeamModel;
 import ar.com.travelbook.common.SeamReadOnlyModel;
 import ar.com.travelbook.domain.Travel;
 import ar.com.travelbook.wizard.ChoicePanel;
 import ar.com.travelbook.wizard.WizardPage;
-import ar.com.travelbook.wizard.summarize.SummarizePage;
 
 public class ActivityPage extends WizardPage {
 
@@ -70,6 +68,7 @@ public class ActivityPage extends WizardPage {
 		});
 		activityTicketTypeForm.add(new CalendarPanel("calendarPanel",new SeamReadOnlyModel("activitiesCalendar")));
 		
+
 	}
 	
 	public String getPlaceName(){

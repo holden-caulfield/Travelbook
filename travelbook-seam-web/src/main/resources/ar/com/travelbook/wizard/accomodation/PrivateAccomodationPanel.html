@@ -8,12 +8,24 @@
 <body>
 <wicket:panel>
 <form wicket:id="privateForm" id="personalForm">
-	Medio:
-	<select name="categoriaAlojamiento" wicket:id="accomodationCategory">
-	</select><input type="text" wicket:id="otherCategory"/><br/>
-	Empresa: <input type="text" wicket:id="description"/><br/>
-	Direccion: <input type="text" wicket:id="address"/><br/>
-	<input type="button" value="Guardar" wicket:id="pSubmit" />
+	<div class="formContent">
+		<div>
+			<label for="category">Medio:</label>
+			<select name="categoriaAlojamiento" wicket:id="category" id="category"></select>
+			<input type="text" wicket:id="otherCategory"/>
+		</div>
+		<div>
+			<label for="description">Empresa:</label>
+			<input type="text" wicket:id="description" id="description" size="50"/>
+		</div>	
+		<div>
+			<label for="address">Direccion:</label>
+			<input type="text" wicket:id="address" id="address"/>
+		</div>	
+		<div class="buttonBar">
+			<input class="formButton" type="button" value="Guardar" wicket:id="pSubmit" />
+		</div>
+	</div>
 </form>
 </wicket:panel>
 </body>

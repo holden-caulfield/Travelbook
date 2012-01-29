@@ -9,11 +9,21 @@
 <body>
 <wicket:panel>
 <form wicket:id="personalForm" id="personalForm">
-	Nombre: <input type="text" wicket:id="name"/><br/>
-	Fecha inicio: 	<div wicket:id="startDateTime" >
-	</div> 
-	Fecha fin: <div wicket:id="endDateTime" />
-	<input type="button" value="Guardar" wicket:id="pSubmit" />
+	<div class="formContent">
+		<div>
+			<label for="name">Nombre:</label> 
+			<input type="text" wicket:id="name" id="name"/>
+		</div>
+		<div>
+			<label>Fecha inicio:</label><div wicket:id="startDateTime" />
+		</div>
+		<div>
+			<label>Fecha fin:</label><div wicket:id="endDateTime" />
+		</div>		
+		<div class="buttonBar">
+			<input class="formButton" type="button" value="Guardar" wicket:id="pSubmit" />
+		</div>
+	</div>
 </form>
 </wicket:panel>
 </body>

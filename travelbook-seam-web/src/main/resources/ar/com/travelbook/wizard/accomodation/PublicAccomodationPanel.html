@@ -7,15 +7,30 @@
 	lang="en">  
 <body>
 <wicket:panel>
-	<form wicket:id="searchForm">
-	Tipo de alojamiento:
-	<select name="categoriaAlojamiento" wicket:id="accomodationCategory">
-	</select><br/>
-	Empresa:<input type="text" wicket:id="description" /><br/>
-	Direccion:<input type="text" wicket:id="address" /><br/>
-	Minimo precio: <input type="text" wicket:id="minPrice" /> <br/>
-	Maximo precio: <input type="text" wicket:id="maxPrice" /> <br/>
-	<input type="submit" value="buscar" />
+	<form class="filter" wicket:id="searchForm">
+	
+	<div class="formContent">	
+		<div>
+			<label for="accomodationCategory">Tipo de alojamiento: </label>
+			<select name="categoriaAlojamiento" wicket:id="accomodationCategory" id="accomodationCategory"></select>
+		</div>
+		<div>
+			<label for="minPrice">Precio Desde: </label> 
+			<input type="text" id="minPrice" wicket:id="minPrice" size="5" /> 
+			<label for="description"> Empresa: </label>	
+			<input type="text" wicket:id="description" id="description"/>
+		</div>	
+		<div>
+			<label for="maxPrice"> Hasta: </label> 
+			<input type="text" id="maxPrice" wicket:id="maxPrice" size="5" />
+			<label for="address"> Direccion: </label>
+			<input type="text" id="address" wicket:id="address" size="30"  /> 
+		</div>
+		<div class="buttonBar">
+			<input class="formButton" type="submit" value="buscar" />
+		</div>
+	</div>
+	
 	<table cellspacing="0" class="dataview" border="1px">
 	<tr>
 		<th>Categoria</th>
@@ -25,21 +40,11 @@
 		<th>Detalle</th>
 	</tr>
 	<tr wicket:id="repeating">
-	    <td>
-	    <span wicket:id="category">[categoria]</span>
-	    </td>
-	    <td>
-	    <a href="#" wicket:id="link"><span wicket:id="name">[nombre]</span></a>
-	    </td>
-	    <td>
-	    <span wicket:id="address">[direccion]</span>
-	    </td>
-	    <td>
-		    <span wicket:id="price">[precio]</span>
-	    </td>
-	    <td>
-		    <a href="#" wicket:id="linkDetalle">Ver Detalle</a>
-	    </td>
+	    <td><span wicket:id="category">[categoria]</span></td>
+	    <td><a href="#" wicket:id="link"><span wicket:id="name">[nombre]</span></a></td>
+	    <td><span wicket:id="address">[direccion]</span></td>
+	    <td><span wicket:id="price">[precio]</span></td>
+	    <td><a href="#" wicket:id="linkDetalle">Ver Detalle</a></td>
 	</tr>
 	</table>
 	</form>

@@ -12,23 +12,33 @@ border-collapse: collapse;
 }
 #calendar td , #calendar th{
 position:relative;
-width: 100px;
 height: 20px;
 border:1px solid;
 vertical-align: top;
 }
+
+#calendar td {
+	width: 100px;
+	padding: 0;
+}
+
+#calendar th {
+	width: 40px;
+}
+
 .event {
 position:absolute;
 display:block;
-border: 1px solid red;
-width:98px;
-background-color: #FF0000;
+border: 1px solid #110073;
+width:96px;
+padding: 2px 0 0 2px;
+background-color: #38C4FF;
 }
 
 	</style>
 </wicket:head>
 <wicket:panel>
-<div style="position: absolute; left: 200px">
+<div style="position: absolute;">
 <div id="contenedor" style="position: relative">
 <table id="calendar">
 	<thead>
@@ -209,7 +219,7 @@ background-color: #FF0000;
 	</thead>
 </table>
 <div wicket:id="eventos">
-	<span wicket:id="nombre" class="event" />
+	<span wicket:id="event" class="event"></span>
 </div>
 </div>
 </div>

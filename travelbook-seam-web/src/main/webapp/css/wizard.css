@@ -160,10 +160,11 @@
     font-size: 0.8em;
 }
 
-.stepContent form input{
+.stepContent form input#searchBox {
     border: 1px solid #b0b0b0;
-    padding: 6px;
+    padding: 5px;
     width: 240px;
+    margin-top: 5px;
 }
 
 .stepContent form button{

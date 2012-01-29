@@ -24,6 +24,7 @@
 	border: none;
 	padding: 2px;
 }
+
 #header button {
 	text-transform: uppercase;
 	color: #110073;
@@ -61,7 +62,7 @@ form div.formContent div > label,
 form div.formContent div > input,
 form div.formContent div > span {
 	display: table-cell;
-	margin: 2px;
+	margin: 2px 0;
 }
 
 form div.formContent div > input {
@@ -72,11 +73,15 @@ form div > label {
 	text-align: right;
 }
 
+form.filter div > label {
+	text-align: left;
+}
+
 form div  label {
 	color: #110073;
 }
 
-form div input, form div button {
+form div input, form div button, .stepContent form input.formButton {
 	border-color: #110073;
 }
 
@@ -85,12 +90,14 @@ form div.buttonBar {
 	margin-right: -15px;
 }
 
-form div button {
+form div button, .stepContent form input.formButton {
 	background-color: #110073;
 	color: white;
 	font-weight: bold;
 	text-transform: uppercase;
 	padding: 2px;
+	border: medium outset #110073;
+	display: inline !important;
 }
 
 p#signupLegend {
@@ -107,6 +114,7 @@ span.alertLegend {
 table {
 	border: 1px solid #110073;
 	margin-top: 5px;
+	margin-bottom: 20px;
 }
 
 table td, table th {
@@ -160,4 +168,25 @@ div.tabPanel label:hover {
 
 div.tabPanel ul li input {
 	display: none;
+}
+
+div.tabContent, div.tabPanel {
+	width: 70%;
+	padding: 0 30px;
+}
+
+div.tabContent {
+	border: 1px solid #110073;
+}
+
+.yui-skin-sam .yui-calendar .calheader {
+	color: black !important;
+}
+
+.yui-skin-sam .yui-calendar .calweekdaycell {
+	color: white !important;
+}
+
+.yui-skin-sam .yui-calendar td.calcell a {
+	font-size: 1em;
 }

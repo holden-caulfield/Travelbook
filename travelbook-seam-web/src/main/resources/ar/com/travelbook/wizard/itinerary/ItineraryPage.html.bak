@@ -15,7 +15,7 @@
 <div class="stepContentItinerarySelection">
 	<h2>Seleccionar destino</h2>
 	<form wicket:id="searchPlace">
-	<input type="text" id="searchBox" wicket:id="searchString" />
+	<input type="text" wicket:id="searchString" />
 	<button type="submit" value=""></button> 
 	</form>
 	<div class="map" wicket:id="mapPanel" >
