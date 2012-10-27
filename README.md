@@ -17,6 +17,7 @@ More on this will be added to this readme later. Stay tuned.
 
 ## Installing
 
+0. Install java jdk 1.6.0
 1. Install the seam wicket instrument patched. (cd seam-instrument-wicket/;mvn install)
 2. Copy Instrumentator with patched order (cp seam-patched/jboss-seam-wicket-2.1.2.jar ~/.m2/repository/org/jboss/seam/jboss-seam-wicket/2.1.2/)
 3. mvn eclipse:eclipse
