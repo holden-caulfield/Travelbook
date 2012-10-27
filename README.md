@@ -9,7 +9,6 @@ More on this will be added to this readme later. Stay tuned.
 
 <h3>TO DO</h3>
 
-* Update README to HTML style in github
 * Push existing codebase
 * Create docs for thesis
 * List implemented user stories
