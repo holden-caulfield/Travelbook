@@ -9,6 +9,7 @@ More on this will be added to this readme later. Stay tuned.
 
 .TO DO
 
+* Update README to HTML style in github
 * Push existing codebase
 * Create docs for thesis
 * List implemented user stories
