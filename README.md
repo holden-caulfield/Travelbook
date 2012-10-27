@@ -1,13 +1,13 @@
-TravelBook ReadMe
+<h1>TravelBook ReadMe</h1>
 
 Travelbook aims to be a social-network-meets-travel-info-site tool.
 More on this will be added to this readme later. Stay tuned.
 
-.Changelog
+<h2>Changelog</h2>
 
 (some day there will be a changelog here)
 
-.TO DO
+<h3>TO DO</h3>
 
 * Update README to HTML style in github
 * Push existing codebase
